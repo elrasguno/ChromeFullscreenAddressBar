@@ -1,0 +1,15 @@
+{
+	"name" : "My Tab Extension",
+	"version" : "0.1",
+	"description" : "add an address bar to the UI",
+	"background_page" : "background.html",
+	"content_scripts" : [
+		{
+			"matches" : ["http://*/*", "chrome://newtab/*"],
+			"css"     : ["mystyle.css"],
+			"js"      : ["jquery.js", "myscript.js"],
+			"run_at"  : "document_start"
+		}
+	],
+	"permissions" : ["http://attnspan.com/", "tabs"]
+}
