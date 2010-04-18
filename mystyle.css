@@ -1,0 +1,19 @@
+.addressbar_container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0 -25%; 
+	width: 550px; 
+	height: 5%;
+	border: 1px dashed #aaa;
+	background-color: #ccc;
+}
+.addressbar_container > input[type='text'] {
+	position: relative;
+	top: 0;
+	left: 29%;
+	margin: 0 -25%;
+	width: 500px;
+	height: 80%;
+	text-align: center;
+}
