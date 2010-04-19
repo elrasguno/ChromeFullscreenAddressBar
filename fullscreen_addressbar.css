@@ -1,4 +1,6 @@
 .addressbar_container {
+	display : none;
+	z-index : 999;
 	position: absolute;
 	top: 0;
 	left: 50%;

@@ -1,15 +1,14 @@
 {
-	"name" : "My Tab Extension",
+	"name" : "Fullscreen Address Bar",
 	"version" : "0.1",
-	"description" : "add an address bar to the UI",
-	"background_page" : "background.html",
+	"description" : "Add an address bar to the UI when in fullscreen mode.  Use the tilde (~) key or the ESC key to hide the address bar.",
 	"content_scripts" : [
 		{
-			"matches" : ["http://*/*", "chrome://newtab/*"],
-			"css"     : ["mystyle.css"],
-			"js"      : ["jquery.js", "myscript.js"],
+			"matches" : ["http://*/*", "https://*/*", "chrome://newtab/*"],
+			"css"     : ["fullscreen_addressbar.css"],
+			"js"      : ["jquery.js", "fullscreen_addressbar.js"],
 			"run_at"  : "document_end"
 		}
 	],
-	"permissions" : ["http://attnspan.com/", "tabs"]
+	"permissions" : ["tabs"]
 }
