@@ -38,7 +38,9 @@ var __fsab = {
 			(this.__url.indexOf('http') === 0 || this.__url.indexOf('com') === this.__url.length - 3 )) {
 				window.location = (this.__url.indexOf('http') === 0 ? this.__url : 'http://' + this.__url);
 		} else {
-			alert('Please enter a valid URL');
+			if($('#new_url').val()) {
+				alert('Please enter a valid URL');
+			}
 		}
 	}
 };
