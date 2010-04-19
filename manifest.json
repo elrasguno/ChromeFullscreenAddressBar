@@ -1,7 +1,7 @@
 {
 	"name" : "Fullscreen Address Bar",
 	"version" : "0.1",
-	"description" : "Add an address bar to the UI when in fullscreen mode.  Use the tilde (~) key or the ESC key to hide the address bar.",
+	"description" : "Add an address bar to the UI when in fullscreen mode.  Use CTRL+L to show, and the tilde (~) key or the ESC key to hide the address bar.",
 	"content_scripts" : [
 		{
 			"matches" : ["http://*/*", "https://*/*", "chrome://newtab/*"],
