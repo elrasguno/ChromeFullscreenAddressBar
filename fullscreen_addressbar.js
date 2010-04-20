@@ -34,14 +34,30 @@ var __fsab = {
 	
 	redirect : function()
 	{
-		if(!!(this.__url = $('#new_url').val()) && 
-			(this.__url.indexOf('http') === 0 || this.__url.indexOf('com') === this.__url.length - 3 )) {
-				window.location = (this.__url.indexOf('http') === 0 ? this.__url : 'http://' + this.__url);
+		if(!!(this.__url = $('#new_url').val()) && this.__isValidURL(this.__url)) {
+				window.location = this.__gotoURL(this.__url);
 		} else {
 			if($('#new_url').val()) {
 				alert('Please enter a valid URL');
 			}
 		}
+	},
+	__isValidURL : function(url)
+	{
+		return url.indexOf('http') === 0 
+			|| url.indexOf('com')  === (url.length - 3)
+			|| url.indexOf('google:') === 0
+			|| /^[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(url);
+	},
+	__gotoURL : function(url)
+	{
+		return url.indexOf('http')    === 0 ? url : 
+			   url.indexOf('chrome')  === 0 ? url :
+			   url.indexOf('google:') === 0 ? 'http://google.com/search?q=' + escape(url.substr('google:'.length, url.length)) :
+			   url.indexOf('bit.ly:') === 0 ? 'http://bit.ly/?url=' + escape(url.substr('bit.ly:'.length, url.length)) :
+			   url.indexOf('.com')    === (url.length - 4) ? 'http://' + url :
+			   url.indexOf('.ly')     === (url.length - 3) ? 'http://' + url :
+			   url
 	}
 };
 
