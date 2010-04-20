@@ -1,0 +1,5 @@
+If you're the type of person that prefers to use a mouse as little as possible, you may want to give this a shot. It's my first experiment with Chrome extensions. I'm using an Ubuntu netbook and was annoyed by not being able to change pages from fullscreen mode like the rest of you. 
+
+Just use CTRL+L from fullscreen mode to show the address bar, and ESC or the ~ key to hide it.
+
+You can download it and load it from chrome://extensions as long as you're using the 'dev' channel version of Chrome. I'll be sure to put a packaged version of this up sometime soon, but from what I've heard, an update to Chrome will solve this problem anyway, so this is just something for the meantime.
