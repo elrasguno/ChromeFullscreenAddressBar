@@ -23,13 +23,15 @@ var __fsab = {
 
 	show   : function()
 	{
-		this.__div.show()
+		this.__div.show().animate({ opacity : 1 }, 500);
 		$('#new_url').focus();
 	},
 
 	hide   : function()
 	{
-		this.__div.hide();
+		this.__div.animate({ opacity : 0 }, 500, 'swing', (function() {
+			this.__div.hide();
+		}).bind(this));
 	},
 	
 	redirect : function()
