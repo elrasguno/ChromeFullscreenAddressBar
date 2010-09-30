@@ -4,11 +4,11 @@
 	"description" : "Add an address bar to the UI when in fullscreen mode.  Use CTRL+L to show, and the tilde (~) key or the ESC key to hide the address bar.",
 	"content_scripts" : [
 		{
-			"matches" : ["http://*/*", "https://*/*", "chrome://newtab/*"],
+			"matches" : ["http://*/*", "https://*/*", "http://*"],
 			"css"     : ["fullscreen_addressbar.css"],
 			"js"      : ["jquery.js", "fullscreen_addressbar.js"],
 			"run_at"  : "document_end"
 		}
 	],
-	"permissions" : ["tabs"]
+	"permissions" : ["tabs", "http://*/*"]
 }

@@ -1,6 +1,4 @@
 .addressbar_container {
-	overflow: auto;
-	overflow-x: hidden;
 	opacity : 0;
 	display : none;
 	z-index : 999;
@@ -14,7 +12,6 @@
 	background-color: #ccc;
 }
 .addressbar_container > input[type='text'] {
-	overflow-x: hidden;
 	position: relative;
 	top: 5px;
 	left: 0;
